@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Breakout</string>
+    <string name="title_activity_main">Breakout</string>
+    <string name="hello_world">FutureSex/LoveSounds</string>
+
+    <!--<string-array name="sentence">-->
+        <!--<item>screen1</item>-->
+        <!--<item>screen2</item>-->
+        <!--<item>screen3</item>-->
+        <!--<item>screen4</item>-->
+        <!--<item>screen5</item>-->
+        <!--<item>screen6</item>-->
+        <!--<item>screen7</item>-->
+        <!--<item>screen8</item>-->
+        <!--<item>screen9</item>-->
+        <!--<item>screen10</item>-->
+        <!--<item>screen11</item>-->
+        <!--<item>screen12</item>-->
+        <!--<item>screen13</item>-->
+        <!--<item>screen14</item>-->
+    <!--</string-array>-->
+</resources>

@@ -100,15 +100,33 @@ public class MainActivity extends Activity {
 
         Bitmap b = Bitmap.createBitmap(640, 360, Bitmap.Config.ARGB_8888);
         b.eraseColor(Color.BLACK);
+        
+        //added variables here to represent the grid width and height for generalizing-sake
+        int gridWidth = 40;
+        int gridHeight = 40;
+        
         for (int i = 0 ; i < b.getWidth(); i++) {
             for (int j = 0; j < b.getHeight(); j++) {
-                if (j % 40 == 0 || j % 40 == 0) {
+            
+            //can we combine these first two conditionals using ||
+                if (j % gridHeight == 0) {
                     b.setPixel(i, j, Color.WHITE);
                 }
-                if (i % 40 == 0) {
+                if (i % gridWidth == 0) {
                     b.setPixel(i, j, Color.WHITE);
                 }
-            }
+
+                //create colored racks within lines from pix 40-640 by 80-280, every other
+                //replace with something similar to 'in range' in python
+                if(i > 40 && i < 640 && j > 80 && j < 120){
+                    b.setPixel(i, j, Color.MAGENTA);
+                }
+                if (i > 40 && i < 640 && j > 160 && j < 200){
+                    b.setPixel(i, j, Color.MAGENTA);
+                }
+                if (i > 40 && i < 640 && j > 240 && j < 280){
+                    b.setPixel(i, j, Color.MAGENTA);
+                }
         }
         card.addImage(b);
         return card.getView();

@@ -100,20 +100,38 @@ public class MainActivity extends Activity {
 
         Bitmap b = Bitmap.createBitmap(640, 360, Bitmap.Config.ARGB_8888);
         b.eraseColor(Color.BLACK);
-        
+
         //added variables here to represent the grid width and height for generalizing-sake
-        int gridWidth = 40;
-        int gridHeight = 40;
-        
-        for (int i = 0 ; i < b.getWidth(); i++) {
+        int gridWidth = 20;
+        int gridHeight = 20;
+
+        //create variable to represent number of racks and figure out schematic
+        int numRacks = 3;
+        int rackWidth = 20;
+
+        //creation of margins
+        int marginLeft = gridWidth; //left starts one box over
+        int marginRight = 640 - gridWidth; //right ends one box to left
+        int marginTop = gridHeight; //top starts one box down
+        int marginBottom = 360 - gridHeight; //bottom ends one box up
+
+        // calculation of rack display
+//        int rackSpace = (int) (360 - 2*gridHeight)/numRacks; //approx spacing for racking
+
+        for (int i = 0; i < b.getWidth(); i++) {
             for (int j = 0; j < b.getHeight(); j++) {
-            
-            //can we combine these first two conditionals using ||
-                if (j % gridHeight == 0) {
+
+                //create grids
+                if (j % gridHeight == 0 || i % gridWidth == 0) {
                     b.setPixel(i, j, Color.WHITE);
                 }
-                if (i % gridWidth == 0) {
-                    b.setPixel(i, j, Color.WHITE);
+
+                //create colored racks within lines from first box on left to last box on left
+                //figure out dynamic looping of vertical direction
+                for (int m = marginTop; m < marginBottom; m = m + 2*gridHeight){
+                    if (i > marginLeft && i < marginRight && j > m && j < m + rackWidth){
+                        b.setPixel(i,j,Color.LTGRAY);
+                    }
                 }
 
                 //create colored racks within lines from pix 40-640 by 80-280, every other

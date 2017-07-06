@@ -133,7 +133,18 @@ public class MainActivity extends Activity {
                         b.setPixel(i,j,Color.LTGRAY);
                     }
                 }
-            }
+
+                //create colored racks within lines from pix 40-640 by 80-280, every other
+                //replace with something similar to 'in range' in python
+                if(i > 40 && i < 640 && j > 80 && j < 120){
+                    b.setPixel(i, j, Color.MAGENTA);
+                }
+                if (i > 40 && i < 640 && j > 160 && j < 200){
+                    b.setPixel(i, j, Color.MAGENTA);
+                }
+                if (i > 40 && i < 640 && j > 240 && j < 280){
+                    b.setPixel(i, j, Color.MAGENTA);
+                }
         }
         card.addImage(b);
         return card.getView();

@@ -3,20 +3,37 @@
     <string name="title_activity_main">Main Activity</string>
     <string name="hello_world">Hello world!</string>
 
+    <!--<string-array name="screens">-->
+        <!--<item>screen1</item>-->
+        <!--<item>screen2</item>-->
+        <!--<item>screen3</item>-->
+        <!--<item>screen4</item>-->
+        <!--<item>screen5</item>-->
+        <!--<item>screen6</item>-->
+        <!--<item>screen7</item>-->
+        <!--<item>screen8</item>-->
+        <!--<item>screen9</item>-->
+        <!--<item>screen10</item>-->
+        <!--<item>screen11</item>-->
+        <!--<item>screen12</item>-->
+        <!--<item>screen13</item>-->
+        <!--<item>screen14</item>-->
+    <!--</string-array>-->
+
     <string-array name="screens">
-        <item>screen1</item>
-        <item>screen2</item>
-        <item>screen3</item>
-        <item>screen4</item>
-        <item>screen5</item>
-        <item>screen6</item>
-        <item>screen7</item>
-        <item>screen8</item>
-        <item>screen9</item>
-        <item>screen10</item>
-        <item>screen11</item>
-        <item>screen12</item>
-        <item>screen13</item>
-        <item>screen14</item>
+        <item>newui1</item>
+        <item>newui2</item>
+        <!--<item>screen3</item>-->
+        <!--<item>screen4</item>-->
+        <!--<item>screen5</item>-->
+        <!--<item>screen6</item>-->
+        <!--<item>screen7</item>-->
+        <!--<item>screen8</item>-->
+        <!--<item>screen9</item>-->
+        <!--<item>screen10</item>-->
+        <!--<item>screen11</item>-->
+        <!--<item>screen12</item>-->
+        <!--<item>screen13</item>-->
+        <!--<item>screen14</item>-->
     </string-array>
 </resources>

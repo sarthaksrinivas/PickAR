@@ -52,7 +52,7 @@ public class MainActivity extends Activity {
         String[] screens = res.getStringArray(R.array.screens);
         mCards = new ArrayList<CardBuilder>();
         for (String name : screens) {
-            mCards.add(new CardBuilder(this, CardBuilder.Layout.CAPTION).addImage(
+            mCards.add(new CardBuilder(this, CardBuilder.Layout.TEXT).addImage(
                     res.getIdentifier(name, "drawable", getPackageName())
             ));
         }

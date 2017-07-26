@@ -1,5 +1,6 @@
 package com.oculogx.layout;
 
+import com.google.android.glass.app.Card;
 import com.google.android.glass.media.Sounds;
 import com.google.android.glass.widget.CardBuilder;
 import com.google.android.glass.widget.CardScrollAdapter;
@@ -14,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.AdapterView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -26,6 +28,8 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
+        setContentView(R.layout.activity_cardv2);
+
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON); // keep screen on
 
         buildView();
@@ -37,14 +41,9 @@ public class MainActivity extends Activity {
         setContentView(mCardScrollView);
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
+    private void setupViews() {
+        TextView location = (TextView) findViewById(R.id.location);
+        location.setText("What you get from the server here");
     }
 
     private void buildView() {
@@ -57,8 +56,9 @@ public class MainActivity extends Activity {
             ));
         }
 
-//        CardBuilder card = new CardBuilder(this, CardBuilder.Layout.TEXT);
-
+        Cards cards = new Cards();
+        mCards.add(new CardBuilder(this, CardBuilder.Layout.TEXT)
+                .addImage(cards.generateLayout()));
 //        card.addImage(R.drawable.screen1);
     }
 
@@ -94,5 +94,4 @@ public class MainActivity extends Activity {
             return mCards.get(position).getView(convertView, parent);
         }
     }
-
 }

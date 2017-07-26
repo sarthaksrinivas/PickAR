@@ -18,12 +18,12 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="@dimen/glass_card_body_height"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="@dimen/glass_card_two_column_margin"
-        android:layout_marginRight="@dimen/glass_card_margin"
+        android:layout_marginStart="@dimen/glass_card_two_column_margin"
+        android:layout_marginEnd="@dimen/glass_card_margin"
         android:layout_marginTop="@dimen/glass_card_margin"
-        android:layout_toRightOf="@+id/left_column"
+        android:layout_toEndOf="@+id/left_column"
         tools:ignore="UselessLeaf">
 
         <!-- Put widgets for the right column inside this RelativeLayout. -->
@@ -35,12 +35,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_gravity="bottom|left"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="bottom|start"
         android:layout_marginBottom="@dimen/glass_card_footer_margin"
-        android:layout_marginLeft="@dimen/glass_card_two_column_margin"
-        android:layout_marginRight="@dimen/glass_card_margin"
-        android:layout_toRightOf="@+id/left_column"
+        android:layout_marginStart="@dimen/glass_card_two_column_margin"
+        android:layout_marginEnd="@dimen/glass_card_margin"
+        android:layout_toEndOf="@+id/left_column"
         android:orientation="horizontal"
         >
 
